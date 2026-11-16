@@ -1,0 +1,39 @@
+/*Q) Write program which accept  a string from user and count  small  characters
+
+input:  marvellous
+output:  9
+
+*/
+
+#include<stdio.h>
+
+int CountSmall(char *str)
+{
+    int icnt =0;
+
+    while(*str != '\0')
+    {
+        if((*str >= 'a') && (*str <= 'z'))
+        {
+            icnt++;
+        }
+        str++;
+    }
+
+    return icnt;
+}
+
+int main()
+{
+    char Arr [20];
+    int iRet =0;
+
+    printf("Enter string :");
+    scanf("%[^'\n']s",Arr);
+
+    iRet = CountSmall(Arr);
+
+    printf(" small letters in string :%d",iRet);
+
+    return 0;
+}
